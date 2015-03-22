@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+
+<h:body>
+	<ui:composition template="/layout.xhtml">
+		<ui:define name="content">
+			<p:panel id="handlepnl" header="ARRASTE"
+				style="width:400px;height:70px">
+				<h:outputText value="I can only be dragged with my header." />
+			</p:panel>
+			<p:draggable for="handlepnl" handle=".ui-panel-titlebar" />
+
+			<p:panel id="hpnl" header="APENAS HORIZONTAL"
+				style="width:400px;height:70px">
+				<h:outputText value="I can only be dragged horizontally." />
+			</p:panel>
+			<p:draggable for="hpnl" axis="x" />
+
+
+
+			<p:panel header="Teste" style="width:50%">
+				<p:button value="Teste" />
+
+
+				<p:notificationBar position="top" effect="slide" styleClass="top"
+					widgetVar="bar">
+					<h:outputText value="GIGANTOSSAUROS" style="font-size:36px;" />
+				</p:notificationBar>
+
+
+			</p:panel>
+
+			<p:commandButton value="Show" onclick="PF('bar').show()"
+				type="button" icon="ui-icon-arrow-1-s" />
+			<p:commandButton value="Hide" onclick="PF('bar').hide()"
+				type="button" icon="ui-icon-arrow-1-n" />
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>
+

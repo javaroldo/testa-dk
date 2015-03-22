@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: 85% arial, hevetica, sans-serif;
+	text-align: center;
+	color: #333;
+	background: #F0F5E6;
+}
+
+a:link {
+	color: #B52C07;
+}
+
+a:visited {
+	color: #b93411;
+}
+
+a:focus {
+	color: #000;
+}
+
+a:hover {
+	color: #7d8206;
+}
+
+a:active {
+	color: red;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0 0 .5em;
+}
+
+h1 {
+	color: #7d8206;
+	font: 200% arial,sans-serif;
+	font:bolder;
+	text-align: center;
+}
+
+h2 {
+	color: #7d8206;
+	font: 150% arial,sans-serif;
+}
+
+h2 a {
+	text-decoration: none;
+}
+
+h3 {
+	color: #7d8206;
+	font: 180% arial,sans-serif;
+}
+
+/* container styles */
+body {
+	margin: 1em auto;
+	width: 100%;
+	text-align: left;
+	background-color: #F6F9F0;
+}
+
+#header {
+	height: 70px;
+	width: 100%;
+	position: relative;
+	padding-left: 2px;
+}
+
+#mainnav {
+	color: #272900;
+	padding-left: 4px;
+	margin-bottom: 17px;
+}
+
+/* menu styles */
+#menu {
+	float: left;
+	width: 250px;
+	/* 	border: 1px solid #000000; */
+	position: relative;
+	padding-left: 3px;
+	margin-right: 20px;
+}
+
+#panelMenu {
+	width: 195px;
+}
+
+
+
+#principal{
+	
+	
+	float: left;
+	width: 70%;
+	position: relative;
+	padding-right: 120px;
+	margin-bottom: 5px;
+	height: 100%;
+	margin-left: 3px;	
+	
+	
+}
+
+#contents {
+	height: 100%;
+	border: 1px outset;
+	border-color: #FBFBFA;
+	border-botton-width: 0px;
+/* 	margin-left: 3px; */
+}
+
+#contents p {
+	line-height: 165%;
+}
+
+/* footer styles */
+#footer {
+	height: 40px;
+	clear: both;
+	color: #272900;
+	text-align: center;
+	font-size: 90%;
+	background: #BEBEBE;
+	padding: 5px;
+	position: bottom;
+	float: bottom;
+	border: 1px solid #C1C1AC;
+	margin-top: 2px;
+}
+
+
+.botoes{
+	
+	float:right;
+	padding-left: 500px;
+	
+	
+	
+	
+}

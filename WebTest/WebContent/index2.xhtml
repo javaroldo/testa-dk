@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+</h:head>
+
+
+<h:body>
+
+
+<!-- HEADER LAYOUT -->
+
+	<div id="header">
+
+		<h1>Projeto JSF 2.2 com PrimeFaces</h1>
+	</div>
+
+	<div id="mainnav">
+
+		<h:form>
+			<p:tabMenu activeIndex="#{param.i}">
+				<p:menuitem value="Gerenciamento" icon="ui-icon-star">
+					<f:param name="i" value="0" />
+				</p:menuitem>
+				<p:menuitem value="Relatórios" icon="ui-icon-search">
+					<f:param name="i" value="1" />
+				</p:menuitem>
+				<p:menuitem value="Ajustes" icon="ui-icon-wrench">
+					<f:param name="i" value="2" />
+				</p:menuitem>
+				<p:menuitem value="Estatísticas" icon="ui-icon-sinal">
+
+				</p:menuitem>
+				<p:menuitem value="Sair" icon="ui-icon-close">
+
+				</p:menuitem>
+			</p:tabMenu>
+			<f:param name="i" value="3" />
+			<f:param name="i" value="4" />
+		</h:form>
+	</div>
+
+
+
+
+<!-- MENU LAYOUT -->
+
+
+	<div id="menu">
+
+		<h:form>
+			<p:growl autoUpdate="true" />
+
+
+			<p:panelMenu style="width:200px">
+
+				<p:submenu label="Clientes">
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+
+				<p:submenu label="Fornecedores">
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+
+				<p:submenu label="Representantes">
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+
+				<p:separator />
+
+				<p:submenu label="Transportadoras">
+
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+
+
+				<p:submenu label="Funcionários">
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+
+
+				<p:submenu label="Estoque">
+					<p:menuitem value="Incluir" actionListener="#{menuView.save}"
+						icon="ui-icon-disk" />
+					<p:menuitem value="Consultar" actionListener="#{menuView.update}"
+						icon="ui-icon-wrench" />
+					<p:menuitem value="Atualizar" actionListener="#{menuView.update}"
+						icon="ui-icon-document" />
+					<p:menuitem value="Apagar" actionListener="#{menuView.update}"
+						icon="ui-icon-close" />
+				</p:submenu>
+			</p:panelMenu>
+		</h:form>
+
+
+
+
+<!-- CONTENTS LAYOUT -->
+
+
+	</div>
+	<div id="contents" style="width: 950px;">
+		<div class="blogentry">
+			<h1>CONTEÚDO DA APLICAÇÃO</h1>
+			<h3>
+				Wednesday, 25 December 2014<br /> <br />Ut wisi enim ad minim
+				veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+				nisl ut aliquip ex ea commodo consequat.<br />
+
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+					nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+					volutpat. Ut wisi enim ad minim vniam, quis nostrud exerci tation
+					ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+					consequat. <a href="#">Duis autem vel eum</a> iriure dolor in
+					hendrerit in vulputate velit esse molestie consequat, vel illum
+					dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+					odio dignissim qui blandit praesent. <br /> <br />Lorem ipsum
+					dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+					euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+					wisi enim ad minim vniam, quis nostrud exerci tation ullamcorper
+					suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a
+						href="#">Duis autem vel eum</a> iriure dolor in hendrerit in
+					vulputate velit esse molestie consequat, vel illum dolore eu
+					feugiat nulla facilisis at vero eros et accumsan et iusto odio
+					dignissim qui blandit praesent. <br />
+				</p>
+			</h3>
+			<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+				ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+				consequat.</p>
+
+		</div>
+	</div>
+	
+	
+<!-- 	FOOTER LAYOUT -->
+	
+	
+	<div id="footer">Copyright © Development Systems</div>
+
+
+</h:body>
+
+</html>

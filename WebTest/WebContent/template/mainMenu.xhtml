@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+</h:head>
+
+<h:body>
+
+	<!-- MENU LAYOUT -->
+
+	<ui:composition>
+		<div id="menu">
+			<h:form>
+				<p:growl autoUpdate="true" />
+				<p:panelMenu id ="panelMenu">
+
+					<p:submenu label="Clientes">
+						<p:menuitem value="Incluir" action="incluirCliente"
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar" action="consultarCliente"
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar" 
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar" 
+							icon="ui-icon-close" />
+					</p:submenu>
+
+					<p:submenu label="Fornecedores">
+						<p:menuitem value="Incluir" 
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar"
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar" 
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar" 
+							icon="ui-icon-close" />
+					</p:submenu>
+
+					<p:submenu label="Representantes">
+						<p:menuitem value="Incluir" 
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar"
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar"
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar"
+							icon="ui-icon-close" />
+					</p:submenu>
+
+					<p:separator />
+					<p:submenu label="Transportadoras">
+						<p:menuitem value="Incluir" 
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar" 
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar"
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar" 
+							icon="ui-icon-close" />
+					</p:submenu>
+
+
+					<p:submenu label="Funcionários">
+						<p:menuitem value="Incluir"
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar"
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar" 
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar"
+							icon="ui-icon-close" />
+					</p:submenu>
+
+					<p:submenu label="Estoque">
+						<p:menuitem value="Incluir" 
+							icon="ui-icon-disk" />
+						<p:menuitem value="Consultar" 
+							icon="ui-icon-wrench" />
+						<p:menuitem value="Atualizar"
+							icon="ui-icon-document" />
+						<p:menuitem value="Apagar" 
+							icon="ui-icon-close" />
+					</p:submenu>
+				</p:panelMenu>
+			</h:form>
+		</div>
+	</ui:composition>
+</h:body>
+</html>

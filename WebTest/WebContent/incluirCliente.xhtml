@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+</h:head>
+
+<h:body>
+
+	<ui:composition template="template/layout.xhtml">
+		<ui:define name="content">
+			<div id="principal">
+				<h1>INCLUIR NOVO CLIENTE</h1>
+				<h:form id="incluirClienteForm">
+					<p:growl id="growl" showDetail="true" sticky="true" />
+					<div id="contents">
+
+						<!-- 	Inicio Conteúdo da Aplicação -->
+
+						<h:panelGrid columns="2" id="gridPrincipal">
+
+
+							<p:outputLabel value="Nome:" for="nome" />
+							<p:inputText id="nome" size="80" required="true"
+								value="#{incluirClienteBean.cliente.nome}" />
+
+
+							<p:outputLabel value="CPF/CNPJ:" for="cpfCnpj" />
+							<p:inputMask id="cpfCnpj" size="15" required="true" mask="999.999.999-99"
+								value="#{incluirClienteBean.cliente.cpfCnpj}" />
+
+
+
+
+							<p:outputLabel value="RG:" for="rg" />
+							<p:inputText id="rg" size="15"
+								value="#{incluirClienteBean.cliente.rg}" />
+
+
+
+
+
+							<p:outputLabel value="Data de Nascimento:" for="dataNascimento" />
+
+
+
+							<p:calendar id="dataNascimento" size="10" required="true"
+								value="#{incluirClienteBean.cliente.dataNascimento}" locale="de"
+								navigator="true" pattern="dd/MM/yyyy" />
+
+
+
+							<p:outputLabel value="Telefone (res):" for="foneRes" />
+							<p:inputMask id="foneRes"
+								value="#{incluirClienteBean.cliente.telefone}" mask="(99) 9999-9999" />
+
+
+							<p:outputLabel value="Telefone (cel):" for="foneCel" />
+							<p:inputMask id="foneCel" required="true" mask="9999-9999"
+								value="#{incluirClienteBean.cliente.telefone}" />
+
+
+
+
+
+							<p:outputLabel value="Endereço:" for="endereco" />
+							<p:inputText id="endereco" size="100"
+								value="#{incluirClienteBean.cliente.endereco}" />
+
+
+
+
+							<p:outputLabel value="CEP:" for="cep" />
+							<p:inputMask id="cep" size="9" mask="99999-999"
+								value="#{incluirClienteBean.cliente.cep}" />
+
+
+
+							<p:outputLabel value="Bairro:" for="bairro" />
+							<p:inputText id="bairro" size="20"
+								value="#{incluirClienteBean.cliente.bairro}" />
+
+
+
+
+							<p:outputLabel value="Estado:" for="estado" />
+							<p:selectOneMenu id="estado" value="#{incluirClienteBean.estado}">
+            <f:selectItem itemLabel="Selecione" itemValue="" />
+            <f:selectItems value="#{incluirClienteBean.viewHelper.estados}" />
+        </p:selectOneMenu>
+
+
+						</h:panelGrid>
+
+
+						<!-- 	Fim Conteúdo da Aplicação -->
+					</div>
+					<!-- 	 fim Div Contents -->
+					<br />
+
+					<!-- 	Inicio área de botões -->
+
+					<h:panelGrid id="botaoIncluir" columns="3" styleClass="botoes">
+						<p:commandButton value="Incluir"
+						
+						
+							action="#{incluirClienteBean.gravar}" update="growl" />
+
+						<p:commandButton value="Voltar" />
+
+
+						<p:commandButton value="Limpar" ajax="true" immediate="true"
+							type="reset" />
+
+					</h:panelGrid>
+
+
+
+
+				</h:form>
+			</div>
+			<!-- 		fim div principal -->
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+
+</html>
